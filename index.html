@@ -24,14 +24,24 @@
     </div>
 
     <div class="cadastro">
-        <div class="formulario">
-            <input type="text" name="nome" placeholder="Nome completo *" required><br>
-            <input type="email" name="email" placeholder="Email *" required><br>
-            <input type="text" nome="telefone" placeholder="Telefone *" required><br>
-            <textarea name="comentario" id="textarea" cols="30" rows="5" placeholder="Mensagem" required></textarea><br> 
-        </div>
+        <form class="formulario" name="formulario">
+            <input type="text" id="nome" name="nome" placeholder="Nome completo *"><br>
+            <span role="alert" id="erroNome" aria-hidden="true">campo obrigatório</span>
+
+            <input type="email" name="email" placeholder="Email *" id="email"><br>
+            <span role="alert" id="erroEmail" aria-hidden="true">campo obrigatório</span>
+
+            <input type="text" nome="telefone" placeholder="Telefone *" id="telefone"><br>
+            <span role="alert" id="erroTelefone" aria-hidden="true">campo obrigatório</span>
+
+            <textarea name="comentario" id="comentario" cols="30" rows="5" placeholder="Mensagem" ></textarea>
+            <span role="alert" id="erroComentario" aria-hidden="true">campo obrigatório</span>
+
+        </form>
         <p>*campos obrigatórios</p>
-        <a href="#"><button>Enviar</button></a>
+        <a href="#">
+            <button id="enviar">Enviar</button>
+        </a>
     </div>
 
     <script type="text/javascript" src="src/js/validacao.js"></script>

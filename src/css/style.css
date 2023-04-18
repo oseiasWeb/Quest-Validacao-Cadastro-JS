@@ -65,5 +65,29 @@ body {
     width: 300px;
     height: 40px;
     border-radius: 2px;
+    cursor: pointer;
 }
 
+span {
+    color: red;
+    font-size: 0.8em;
+}
+
+#erroNome, #erroEmail, #erroTelefone, #erroComentario {
+    display: none;
+    font-size: 8px;
+    margin-top: -15px;
+    margin-bottom: 5px;
+}
+
+#erroNome.visible, #erroEmail.visible, #erroTelefone.visible, #erroComentario.visible {
+    display: block;    
+}
+
+.cadastro .formulario input.invalid, textarea.invalid {
+    border-color: red;
+}
+
+.cadastro .formulario input.valid {
+    border-color: green;
+}
