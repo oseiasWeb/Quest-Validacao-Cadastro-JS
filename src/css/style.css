@@ -53,6 +53,18 @@ body {
     border: solid 1px #000000;
 }
 
+.span-required {
+    position: absolute;
+    width: 288px;
+    height: 10px;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 9px;
+    color: #F52E2E;
+    margin-top: -14px;
+    display: none;
+}
+
 .cadastro p {
     font-size: 15px;
     font-weight: 400;
@@ -68,26 +80,12 @@ body {
     cursor: pointer;
 }
 
-span {
-    color: red;
-    font-size: 0.8em;
+.campoInvalido {
+    border: 2px solid #F52E2E;
+    border-radius: 5px;
 }
 
-#erroNome, #erroEmail, #erroTelefone, #erroComentario {
-    display: none;
-    font-size: 8px;
-    margin-top: -15px;
-    margin-bottom: 5px;
-}
-
-#erroNome.visible, #erroEmail.visible, #erroTelefone.visible, #erroComentario.visible {
-    display: block;    
-}
-
-.cadastro .formulario input.invalid, textarea.invalid {
-    border-color: red;
-}
-
-.cadastro .formulario input.valid {
-    border-color: green;
+.campo-valido {
+    border: 2px solid #00C22B;
+    border-radius: 5px;
 }
