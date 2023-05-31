@@ -4,6 +4,15 @@ const mensagemCamposObrigatorios = document.querySelectorAll(".span-required")
 const validacaoEmail = /\S+@\S+\.\S+/;
 const validacaoTelefone = /^\(?[1-9]{2}\)? ?(?:[2-8]|9[1-9])[0-9]{3}\-?[0-9]{4}$/;
 
+form.addEventListener('submit', (event) => {
+    event.preventDefault();
+    validarNome();
+    validarEmail();
+    validarTelefone();
+    validarMensagem();
+
+});
+
 function setError(index) {
     campos[index].style.border = '2px solid #F52E2E';
     mensagemCamposObrigatorios[index].style.display = 'block';
@@ -42,7 +51,6 @@ function validarTelefone() {
 
 function validarMensagem() {
     if(campos[3].value.length < 3) {
-        console.log("Não digitou nada");
         setError(3)
     } else {
         setSucess(3);

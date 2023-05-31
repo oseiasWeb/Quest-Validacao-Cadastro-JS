@@ -26,18 +26,20 @@
     <div class="cadastro">
         <form id="form" class="formulario" name="formulario">
             <div>
-                <input type="text" class="input-text required" id="nome" name="nome" placeholder="Nome completo *" oninput="validarNome()"><br>
+                <input type="text" class="input-text required" id="nome" name="nome" placeholder="Nome completo *"
+                    oninput="validarNome()"><br>
                 <span class="span-required">O nome deve ter no mínimo 3 caracteres</span>
             </div>
 
             <div>
-                <input type="email" class="input-text required" name="email" placeholder="Email *" id="email" oninput="validarEmail()"><br>
+                <input type="email" class="input-text required" name="email" placeholder="Email *" id="email"
+                    oninput="validarEmail()"><br>
                 <span class="span-required">Informe um email válido</span>
             </div>
 
             <div>
-                <input type="text" class="input-text required" nome="telefone" placeholder="Telefone *"
-                    id="telefone" oninput="validarTelefone()"><br>
+                <input type="text" class="input-text required" nome="telefone" placeholder="Telefone *" id="telefone"
+                    oninput="validarTelefone()"><br>
                 <span class="span-required">Informe DDD + 9 Dígitos</span>
             </div>
 
@@ -47,11 +49,11 @@
                 <span class="span-required">campo obrigatório</span>
             </div>
 
+            <p>*campos obrigatórios</p>
+            <a href="#">
+                <button type="submit">Enviar</button>
+            </a>
         </form>
-        <p>*campos obrigatórios</p>
-        <a href="#" onclick="confirmarEnviar()">
-            <button id="enviar">Enviar</button>
-        </a>
     </div>
 
     <script src="src/js/validacao.js"></script>
